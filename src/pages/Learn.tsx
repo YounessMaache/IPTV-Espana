@@ -130,6 +130,60 @@ const articles = [
     title: "Guía Definitiva de M3U IPTV: Qué Es y Cómo Usarla",
     description: "Aprende qué es una lista M3U, cómo conseguirla, cargarla en tu dispositivo y usarla correctamente para ver IPTV.",
     category: "Guía Técnica"
+  },
+  {
+    slug: "iptv-gratis-para-tv-espana",
+    title: "IPTV gratis para TV: ¿La Opción Barata o la Peor Decisión?",
+    description: "Descubre por qué el IPTV gratis para TV casi nunca funciona a largo plazo y cuál es la alternativa inteligente.",
+    category: "Análisis"
+  },
+  {
+    slug: "comparativa-iptv-players",
+    title: "Comparativa: IPTV Smart Player vs IPTV app gratis vs Kodi",
+    description: "Comparativa completa de reproductores IPTV para el usuario español - TiviMate, IPTV Extreme, GSE Smart IPTV y Kodi.",
+    category: "Comparativas"
+  },
+  {
+    slug: "iptv-para-pc-mac",
+    title: "IPTV para PC y Mac: La Mejor Manera de Ver TV en tu Ordenador",
+    description: "Guía completa para ver IPTV en PC y Mac - VLC, Kodi y reproductores web. Instalación paso a paso.",
+    category: "PC"
+  },
+  {
+    slug: "solucionar-problemas-iptv",
+    title: "Solucionando Problemas: ¿Por qué mi IPTV Player M3U No Funciona?",
+    description: "Guía completa de solución de problemas IPTV - conexión, lista M3U, dispositivo y proveedor. Soluciones rápidas.",
+    category: "Soporte"
+  },
+  {
+    slug: "iptv-reddit-opiniones",
+    title: "IPTV Reddit: Lo que los Usuarios Reales Piensan Antes de Comprar",
+    description: "Descubre las opiniones reales de usuarios en IPTV Reddit sobre estabilidad, reproductores y soporte técnico en España.",
+    category: "Comunidad"
+  },
+  {
+    slug: "iptv-gratis-vs-calidad",
+    title: "De IPTV gratis Android a Calidad: ¿Merece la Pena la Inversión?",
+    description: "Análisis completo del viaje del usuario desde IPTV gratis hasta servicios de calidad. Por qué la inversión mínima vale la pena.",
+    category: "Análisis"
+  },
+  {
+    slug: "instalar-iptv-smart-tv",
+    title: "Cómo Instalar IPTV en 5 Minutos (Smart TV y Fire Stick)",
+    description: "Guía paso a paso para instalar IPTV en Smart TV y Fire Stick en solo 5 minutos. Configuración sencilla y rápida.",
+    category: "Tutorial"
+  },
+  {
+    slug: "iptv-smart-player-vs-nativo",
+    title: "IPTV Smart Player vs IPTV app nativa: ¿Cuál es mejor?",
+    description: "Comparativa completa entre reproductores externos (Fire Stick) y apps nativas de Smart TV. Ventajas y desventajas.",
+    category: "Comparativas"
+  },
+  {
+    slug: "iptv-extreme-vs-tivimate",
+    title: "IPTV Extreme vs TiviMate: Dos Gigantes de Android TV",
+    description: "Comparativa detallada entre IPTV Extreme y TiviMate - características, ventajas y cuál elegir según tus necesidades.",
+    category: "Comparativas"
   }
 ];
 
