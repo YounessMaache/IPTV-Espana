@@ -37,7 +37,7 @@ const MejorIPTVEspana = () => {
                 <li>❌ Servicios claramente piratas</li>
                 <li>❌ Vendedores solo por WhatsApp</li>
                 <li>❌ Sin web identificable</li>
-                <li>❌ Demasiado baratos (<10€ miles canales)</li>
+                <li>❌ Demasiado baratos (&lt;10€ miles canales)</li>
                 <li>❌ Opiniones falsas masivas</li>
               </ul>
             </div>

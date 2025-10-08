@@ -26,6 +26,9 @@ import IPTVExtreme from "./pages/articles/IPTVExtreme";
 import IPTVEspana2025 from "./pages/articles/IPTVEspana2025";
 import MejorIPTVEspana from "./pages/articles/MejorIPTVEspana";
 import IPTVLegalEspana from "./pages/articles/IPTVLegalEspana";
+import SolucionarBufferingIPTV from "./pages/articles/SolucionarBufferingIPTV";
+import MejorIPTVPlayerM3U from "./pages/articles/MejorIPTVPlayerM3U";
+import GuiaM3UIPTV from "./pages/articles/GuiaM3UIPTV";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +62,9 @@ function App() {
             <Route path="/aprende/iptv-espana-2025" element={<IPTVEspana2025 />} />
             <Route path="/aprende/mejor-iptv-espana" element={<MejorIPTVEspana />} />
             <Route path="/aprende/iptv-legal-espana" element={<IPTVLegalEspana />} />
+            <Route path="/aprende/solucionar-buffering-iptv-stream" element={<SolucionarBufferingIPTV />} />
+            <Route path="/aprende/mejor-iptv-player-m3u" element={<MejorIPTVPlayerM3U />} />
+            <Route path="/aprende/guia-m3u-iptv" element={<GuiaM3UIPTV />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

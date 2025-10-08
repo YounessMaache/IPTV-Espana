@@ -112,6 +112,24 @@ const articles = [
     title: "¿IPTV es Legal en España? La Verdad que Debes Saber",
     description: "Descubre la legalidad del IPTV en España, cómo identificar servicios legítimos y evitar problemas legales al contratar un servicio.",
     category: "Legal España"
+  },
+  {
+    slug: "solucionar-buffering-iptv-stream",
+    title: "Adiós al Buffering: Por qué se corta tu IPTV Stream app",
+    description: "Descubre las 5 causas más comunes del buffering en IPTV y cómo solucionarlas rápidamente para disfrutar sin cortes.",
+    category: "Soluciones"
+  },
+  {
+    slug: "mejor-iptv-player-m3u",
+    title: "El Mejor IPTV Player M3U: Comparativa de 4 Apps Imprescindibles",
+    description: "Comparativa completa de los mejores reproductores IPTV - TiviMate, GSE Smart IPTV, VLC y IPTV Extreme. Gratis vs Pro.",
+    category: "Apps"
+  },
+  {
+    slug: "guia-m3u-iptv",
+    title: "Guía Definitiva de M3U IPTV: Qué Es y Cómo Usarla",
+    description: "Aprende qué es una lista M3U, cómo conseguirla, cargarla en tu dispositivo y usarla correctamente para ver IPTV.",
+    category: "Guía Técnica"
   }
 ];
 
