@@ -25,7 +25,7 @@ const MejorIPTVEspana = () => {
               <ul className="space-y-2">
                 <li><strong>Legalidad y Transparencia (30%):</strong> Empresa identificable, web profesional, métodos de pago legítimos</li>
                 <li><strong>Catálogo de Canales España (25%):</strong> Canales TDT completos, Movistar LaLiga, autonómicos</li>
-                <li><strong>Calidad y Estabilidad (20%):</strong> Streams HD/Full HD, sin cortes, uptime >95%</li>
+                <li><strong>Calidad y Estabilidad (20%):</strong> Streams HD/Full HD, sin cortes, uptime &gt;95%</li>
                 <li><strong>Precio y Planes (15%):</strong> Relación calidad-precio, transparencia, prueba gratis</li>
                 <li><strong>Facilidad de Uso (10%):</strong> Apps funcionan bien, instalación simple, EPG en español</li>
               </ul>
