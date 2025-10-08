@@ -88,6 +88,12 @@ const articles = [
     title: "IPTV App Gratis: Las 12 Mejores Aplicaciones Gratuitas para Ver TV 2025",
     description: "Descarga las mejores IPTV app gratis - comparativa completa de apps gratuitas para Android, iOS, Smart TV y PC.",
     category: "Apps"
+  },
+  {
+    slug: "iptv-extreme",
+    title: "IPTV Extreme: Guía Completa de Configuración, Características y Trucos 2025",
+    description: "Descubre todo sobre IPTV Extreme - guía completa de instalación, configuración avanzada, mejores características, solución de problemas y comparativa con otras apps IPTV en 2025.",
+    category: "Apps Avanzadas"
   }
 ];
 

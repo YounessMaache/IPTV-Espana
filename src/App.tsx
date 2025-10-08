@@ -22,6 +22,7 @@ import IPTVStreamApp from "./pages/articles/IPTVStreamApp";
 import IPTVLegal from "./pages/articles/IPTVLegal";
 import IPTVReddit from "./pages/articles/IPTVReddit";
 import IPTVAppGratis from "./pages/articles/IPTVAppGratis";
+import IPTVExtreme from "./pages/articles/IPTVExtreme";
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ function App() {
             <Route path="/aprende/iptv-legal" element={<IPTVLegal />} />
             <Route path="/aprende/iptv-reddit" element={<IPTVReddit />} />
             <Route path="/aprende/iptv-app-gratis" element={<IPTVAppGratis />} />
+            <Route path="/aprende/iptv-extreme" element={<IPTVExtreme />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
