@@ -23,6 +23,9 @@ import IPTVLegal from "./pages/articles/IPTVLegal";
 import IPTVReddit from "./pages/articles/IPTVReddit";
 import IPTVAppGratis from "./pages/articles/IPTVAppGratis";
 import IPTVExtreme from "./pages/articles/IPTVExtreme";
+import IPTVEspana2025 from "./pages/articles/IPTVEspana2025";
+import MejorIPTVEspana from "./pages/articles/MejorIPTVEspana";
+import IPTVLegalEspana from "./pages/articles/IPTVLegalEspana";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +56,9 @@ function App() {
             <Route path="/aprende/iptv-reddit" element={<IPTVReddit />} />
             <Route path="/aprende/iptv-app-gratis" element={<IPTVAppGratis />} />
             <Route path="/aprende/iptv-extreme" element={<IPTVExtreme />} />
+            <Route path="/aprende/iptv-espana-2025" element={<IPTVEspana2025 />} />
+            <Route path="/aprende/mejor-iptv-espana" element={<MejorIPTVEspana />} />
+            <Route path="/aprende/iptv-legal-espana" element={<IPTVLegalEspana />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

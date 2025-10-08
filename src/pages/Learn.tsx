@@ -94,6 +94,24 @@ const articles = [
     title: "IPTV Extreme: Guía Completa de Configuración, Características y Trucos 2025",
     description: "Descubre todo sobre IPTV Extreme - guía completa de instalación, configuración avanzada, mejores características, solución de problemas y comparativa con otras apps IPTV en 2025.",
     category: "Apps Avanzadas"
+  },
+  {
+    slug: "iptv-espana-2025",
+    title: "IPTV España 2025: Guía Completa para Ver TV por Internet",
+    description: "Descubre todo sobre IPTV en España 2025 - qué es, cómo funciona, mejores proveedores legales, instalación en Smart TV, precios y canales disponibles.",
+    category: "Guía España"
+  },
+  {
+    slug: "mejor-iptv-espana",
+    title: "Mejor IPTV España: TOP 5 Proveedores Legales y Baratos 2025",
+    description: "Descubre los 5 mejores proveedores IPTV en España 2025 - comparativa honesta de precios, canales, calidad y opiniones reales.",
+    category: "Comparativas"
+  },
+  {
+    slug: "iptv-legal-espana",
+    title: "¿IPTV es Legal en España? La Verdad que Debes Saber",
+    description: "Descubre la legalidad del IPTV en España, cómo identificar servicios legítimos y evitar problemas legales al contratar un servicio.",
+    category: "Legal España"
   }
 ];
 
