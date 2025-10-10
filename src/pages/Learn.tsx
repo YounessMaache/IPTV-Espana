@@ -184,6 +184,54 @@ const articles = [
     title: "IPTV Extreme vs TiviMate: Dos Gigantes de Android TV",
     description: "Comparativa detallada entre IPTV Extreme y TiviMate - características, ventajas y cuál elegir según tus necesidades.",
     category: "Comparativas"
+  },
+  {
+    slug: "futbol-iptv-2025-espana",
+    title: "Fútbol IPTV 2025 España: Todos los Partidos en Tu TV",
+    description: "Guía completa fútbol IPTV España 2025 - cómo ver LaLiga, Champions League y todos los partidos con iptvespana.site desde €2.91/mes.",
+    category: "Deportes"
+  },
+  {
+    slug: "iptv-espana-servicio",
+    title: "IPTV España: Ver Todos los Canales Españoles Desde €2.91/Mes",
+    description: "Servicio IPTV España completo con 20,000+ canales, Netflix incluido. Instalación en 5 minutos en Fire TV, Smart TV y móvil.",
+    category: "Servicios"
+  },
+  {
+    slug: "mejor-iptv-espana-reddit",
+    title: "Mejor IPTV España Reddit: Lo Que Realmente Funciona en 2025",
+    description: "Análisis de opiniones Reddit sobre IPTV España. Por qué iptvespana.site es la mejor opción según usuarios reales.",
+    category: "Comunidad"
+  },
+  {
+    slug: "iptv-fire-stick-listas-m3u",
+    title: "IPTV Fire TV Stick: Guía Completa con Listas M3U España 2025",
+    description: "Cómo instalar IPTV en Fire TV Stick. Por qué iptvespana.site es mejor que listas M3U tradicionales. Guía paso a paso.",
+    category: "Fire TV"
+  },
+  {
+    slug: "listas-m3u-iptv-espana",
+    title: "Listas M3U IPTV España 2025: Por Qué Xtream Codes es Superior",
+    description: "Descubre por qué las listas M3U tienen limitaciones y cómo iptvespana.site con Xtream Codes ofrece una experiencia superior desde €2.91/mes.",
+    category: "Guía Técnica"
+  },
+  {
+    slug: "iptv-espana-fire-tv",
+    title: "IPTV España Fire TV: La Combinación Perfecta para Ver Todo",
+    description: "Fire TV Stick + iptvespana.site = La mejor experiencia IPTV. Guía completa de instalación y configuración en 12 minutos.",
+    category: "Fire TV"
+  },
+  {
+    slug: "mejor-iptv-futbol-espana",
+    title: "Mejor IPTV para Fútbol España: Ver LaLiga y Champions Desde €2.91/Mes",
+    description: "Guía completa para ver todo el fútbol con iptvespana.site - LaLiga, Champions, Premier y más. Ahorra 805€/año vs operadoras.",
+    category: "Deportes"
+  },
+  {
+    slug: "iptv-espana-reddit-opiniones",
+    title: "IPTV España Reddit: Opiniones Reales y Por Qué IPTVEspana.site Destaca",
+    description: "Análisis de opiniones Reddit sobre IPTV España. Descubre por qué iptvespana.site cumple todas las expectativas de usuarios reales.",
+    category: "Comunidad"
   }
 ];
 

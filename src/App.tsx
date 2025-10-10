@@ -38,6 +38,14 @@ import IPTVGratisVsCalidad from "./pages/articles/IPTVGratisVsCalidad";
 import InstalarIPTVSmartTV from "./pages/articles/InstalarIPTVSmartTV";
 import IPTVSmartPlayerVsNativo from "./pages/articles/IPTVSmartPlayerVsNativo";
 import IPTVExtremeVsTiviMate from "./pages/articles/IPTVExtremeVsTiviMate";
+import FutbolIPTV2025 from "./pages/articles/FutbolIPTV2025";
+import IPTVEspana2025Service from "./pages/articles/IPTVEspana2025Service";
+import MejorIPTVEspanaReddit from "./pages/articles/MejorIPTVEspanaReddit";
+import IPTVFireStickListasM3U from "./pages/articles/IPTVFireStickListasM3U";
+import ListasM3UIPTVEspana from "./pages/articles/ListasM3UIPTVEspana";
+import IPTVEspanaFireTV from "./pages/articles/IPTVEspanaFireTV";
+import MejorIPTVFutbolEspana from "./pages/articles/MejorIPTVFutbolEspana";
+import IPTVEspanaRedditOpiniones from "./pages/articles/IPTVEspanaRedditOpiniones";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +91,14 @@ function App() {
             <Route path="/aprende/instalar-iptv-smart-tv" element={<InstalarIPTVSmartTV />} />
             <Route path="/aprende/iptv-smart-player-vs-nativo" element={<IPTVSmartPlayerVsNativo />} />
             <Route path="/aprende/iptv-extreme-vs-tivimate" element={<IPTVExtremeVsTiviMate />} />
+            <Route path="/aprende/futbol-iptv-2025-espana" element={<FutbolIPTV2025 />} />
+            <Route path="/aprende/iptv-espana-servicio" element={<IPTVEspana2025Service />} />
+            <Route path="/aprende/mejor-iptv-espana-reddit" element={<MejorIPTVEspanaReddit />} />
+            <Route path="/aprende/iptv-fire-stick-listas-m3u" element={<IPTVFireStickListasM3U />} />
+            <Route path="/aprende/listas-m3u-iptv-espana" element={<ListasM3UIPTVEspana />} />
+            <Route path="/aprende/iptv-espana-fire-tv" element={<IPTVEspanaFireTV />} />
+            <Route path="/aprende/mejor-iptv-futbol-espana" element={<MejorIPTVFutbolEspana />} />
+            <Route path="/aprende/iptv-espana-reddit-opiniones" element={<IPTVEspanaRedditOpiniones />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
