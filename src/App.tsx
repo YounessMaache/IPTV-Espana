@@ -46,6 +46,10 @@ import ListasM3UIPTVEspana from "./pages/articles/ListasM3UIPTVEspana";
 import IPTVEspanaFireTV from "./pages/articles/IPTVEspanaFireTV";
 import MejorIPTVFutbolEspana from "./pages/articles/MejorIPTVFutbolEspana";
 import IPTVEspanaRedditOpiniones from "./pages/articles/IPTVEspanaRedditOpiniones";
+import ListasIPTV2025 from "./pages/articles/ListasIPTV2025";
+import IPTVSmartersPro from "./pages/articles/IPTVSmartersPro";
+import GuiaIPTVEspana2025 from "./pages/articles/GuiaIPTVEspana2025";
+import ListasIPTVEspana2025 from "./pages/articles/ListasIPTVEspana2025";
 
 const queryClient = new QueryClient();
 
@@ -99,6 +103,10 @@ function App() {
             <Route path="/aprende/iptv-espana-fire-tv" element={<IPTVEspanaFireTV />} />
             <Route path="/aprende/mejor-iptv-futbol-espana" element={<MejorIPTVFutbolEspana />} />
             <Route path="/aprende/iptv-espana-reddit-opiniones" element={<IPTVEspanaRedditOpiniones />} />
+            <Route path="/aprende/listas-iptv-2025" element={<ListasIPTV2025 />} />
+            <Route path="/aprende/iptv-smarters-pro" element={<IPTVSmartersPro />} />
+            <Route path="/aprende/guia-iptv-espana-2025" element={<GuiaIPTVEspana2025 />} />
+            <Route path="/aprende/listas-iptv-espana-2025" element={<ListasIPTVEspana2025 />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
