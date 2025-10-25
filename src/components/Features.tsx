@@ -1,55 +1,60 @@
 import { Zap, Shield, Smartphone, HeadphonesIcon, Film, TrendingUp } from "lucide-react";
 import { Card } from "@/components/ui/card";
-
-const features = [
-  {
-    icon: Zap,
-    title: "Servidores Ultra Rápidos",
-    description: "Servidores de 5ª generación con tecnología anti-congelamiento para streaming fluido",
-    gradient: "from-primary/20 to-primary/5"
-  },
-  {
-    icon: Shield,
-    title: "Estable y Confiable",
-    description: "Garantía de disponibilidad del 99.9% sin buffering ni interrupciones",
-    gradient: "from-secondary/20 to-secondary/5"
-  },
-  {
-    icon: Smartphone,
-    title: "Todos los Dispositivos",
-    description: "Compatible con Smart TV, Fire Stick, iOS, Android, PC y más",
-    gradient: "from-primary/20 to-primary/5"
-  },
-  {
-    icon: Film,
-    title: "Calidad 4K",
-    description: "Transmite en calidad 4K, FHD, HD y SD según tu preferencia",
-    gradient: "from-secondary/20 to-secondary/5"
-  },
-  {
-    icon: HeadphonesIcon,
-    title: "Soporte 24/7",
-    description: "Soporte personalizado por WhatsApp y Telegram en cualquier momento",
-    gradient: "from-primary/20 to-primary/5"
-  },
-  {
-    icon: TrendingUp,
-    title: "Activación Instantánea",
-    description: "Tu servicio IPTV se activa inmediatamente después de la compra",
-    gradient: "from-secondary/20 to-secondary/5"
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Features = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+    const features = [
+    {
+      icon: Zap,
+      title: t.features.ultraFastServers,
+      description: t.features.ultraFastServersDesc,
+      gradient: "from-primary/20 to-primary/5"
+    },
+    {
+      icon: Shield,
+      title: t.features.stableReliable,
+      description: t.features.stableReliableDesc,
+      gradient: "from-secondary/20 to-secondary/5"
+    },
+    {
+      icon: Smartphone,
+      title: t.features.allDevices,
+      description: t.features.allDevicesDesc,
+      gradient: "from-primary/20 to-primary/5"
+    },
+    {
+      icon: Film,
+      title: t.features.quality4k,
+      description: t.features.quality4kDesc,
+      gradient: "from-secondary/20 to-secondary/5"
+    },
+    {
+      icon: HeadphonesIcon,
+      title: t.features.support247,
+      description: t.features.support247Desc,
+      gradient: "from-primary/20 to-primary/5"
+    },
+    {
+      icon: TrendingUp,
+      title: t.features.instantActivation,
+      description: t.features.instantActivationDesc,
+      gradient: "from-secondary/20 to-secondary/5"
+    },
+  ];
+
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            ¿Por Qué Elegir <span className="text-gradient-secondary">Nuestro Servicio</span>?
+            {t.features.title} <span className="text-gradient-secondary">{t.features.titleHighlight}</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Servicio IPTV premium con 9 años de experiencia
+            {t.features.subtitle}
           </p>
         </div>
 

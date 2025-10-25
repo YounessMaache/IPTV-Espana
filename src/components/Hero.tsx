@@ -2,8 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Play, Tv } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Hero = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   return (
     <section className="relative min-h-screen flex items-start pt-20 justify-center overflow-hidden">
       {/* Background Image */}
@@ -24,31 +28,31 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border">
             <Tv className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium">Servicio IPTV Premium</span>
+            <span className="text-sm font-medium">{t.hero.badge}</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            IPTV
-            <span className="text-gradient-primary"> España</span>
+            {t.hero.title}
+            <span className="text-gradient-primary"> {t.hero.titleHighlight}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Accede a más de <span className="text-primary font-semibold">20,000+</span> canales y{" "}
-            <span className="text-secondary font-semibold">80,000+</span> películas y series en calidad{" "}
-            <span className="font-semibold">4K, FHD y HD</span>
+            {t.hero.description} <span className="text-primary font-semibold">{t.hero.channels}</span> {t.hero.channelsText}{" "}
+            <span className="text-secondary font-semibold">{t.hero.content}</span> {t.hero.contentText}{" "}
+            <span className="font-semibold">{t.hero.quality}</span> {t.hero.qualityText}
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button variant="hero" size="xl" className="gap-3" asChild>
               <a href="https://api.whatsapp.com/message/DHGGPLDKC2L2N1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
                 <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5" />
-                Empezar Ahora
+                {t.hero.startButton}
               </a>
             </Button>
             <Button variant="cta" size="xl" className="gap-3" asChild>
               <a href="#pricing">
                 <Tv className="w-5 h-5" />
-                Ver Planes
+                {t.hero.plansButton}
               </a>
             </Button>
           </div>
@@ -56,15 +60,15 @@ const Hero = () => {
           <div className="pt-2 flex items-center justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span>Sin Cortes</span>
+              <span>{t.hero.noInterruptions}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
-              <span>Soporte 24/7</span>
+              <span>{t.hero.support247}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
-              <span>Activación Instantánea</span>
+              <span>{t.hero.instantActivation}</span>
             </div>
           </div>
         </div>

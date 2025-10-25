@@ -2,70 +2,75 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
 import { useEffect } from "react";
-
-const plans = [
-  {
-    name: "1 Mes",
-    price: "€7",
-    period: "mes",
-    planId: "P-4SX77904US014092DNDOUPHQ",
-    containerId: "paypal-button-container-P-4SX77904US014092DNDOUPHQ",
-    features: [
-      "20,000+ Canales en Vivo",
-      "80,000+ Películas y Series",
-      "Netflix, Amazon Prime, Disney+ y Más",
-      "Calidad 4K/FHD/HD",
-      "Todos los Dispositivos",
-      "Soporte 24/7",
-      "Tecnología Anti-Congelamiento",
-      "Guía EPG Incluida",
-      "Ayuda de Instalación Gratis"
-    ],
-    popular: false
-  },
-  {
-    name: "6 Meses",
-    price: "€25",
-    period: "6 meses",
-    savings: "Ahorra 30%",
-    planId: "P-7SD92671U01321630NDOURKY",
-    containerId: "paypal-button-container-P-7SD92671U01321630NDOURKY",
-    features: [
-      "20,000+ Canales en Vivo",
-      "80,000+ Películas y Series",
-      "Netflix, Amazon Prime, Disney+ y Más",
-      "Calidad 4K/FHD/HD",
-      "Todos los Dispositivos",
-      "Soporte 24/7",
-      "Tecnología Anti-Congelamiento",
-      "Guía EPG Incluida",
-      "Ayuda de Instalación Gratis"
-    ],
-    popular: true
-  },
-  {
-    name: "12 Meses",
-    price: "€35",
-    period: "año",
-    savings: "Ahorra 50%",
-    planId: "P-1FP699314S8861355NDOUSQI",
-    containerId: "paypal-button-container-P-1FP699314S8861355NDOUSQI",
-    features: [
-      "20,000+ Canales en Vivo",
-      "80,000+ Películas y Series",
-      "Netflix, Amazon Prime, Disney+ y Más",
-      "Calidad 4K/FHD/HD",
-      "Todos los Dispositivos",
-      "Soporte 24/7",
-      "Tecnología Anti-Congelamiento",
-      "Guía EPG Incluida",
-      "Ayuda de Instalación Gratis"
-    ],
-    popular: false
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Pricing = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
+    const plans = [
+    {
+      name: t.pricing.plan1Month,
+      price: "€7",
+      period: t.pricing.month,
+      planId: "P-4SX77904US014092DNDOUPHQ",
+      containerId: "paypal-button-container-P-4SX77904US014092DNDOUPHQ",
+      features: [
+        t.pricing.feature1,
+        t.pricing.feature2,
+        t.pricing.feature3,
+        t.pricing.feature4,
+        t.pricing.feature5,
+        t.pricing.feature6,
+        t.pricing.feature7,
+        t.pricing.feature8,
+        t.pricing.feature9
+      ],
+      popular: false
+    },
+    {
+      name: t.pricing.plan6Months,
+      price: "€25",
+      period: `6 ${t.pricing.months}`,
+      savings: `${t.pricing.save} 30%`,
+      planId: "P-7SD92671U01321630NDOURKY",
+      containerId: "paypal-button-container-P-7SD92671U01321630NDOURKY",
+      features: [
+        t.pricing.feature1,
+        t.pricing.feature2,
+        t.pricing.feature3,
+        t.pricing.feature4,
+        t.pricing.feature5,
+        t.pricing.feature6,
+        t.pricing.feature7,
+        t.pricing.feature8,
+        t.pricing.feature9
+      ],
+      popular: true
+    },
+    {
+      name: t.pricing.plan12Months,
+      price: "€35",
+      period: t.pricing.year,
+      savings: `${t.pricing.save} 50%`,
+      planId: "P-1FP699314S8861355NDOUSQI",
+      containerId: "paypal-button-container-P-1FP699314S8861355NDOUSQI",
+      features: [
+        t.pricing.feature1,
+        t.pricing.feature2,
+        t.pricing.feature3,
+        t.pricing.feature4,
+        t.pricing.feature5,
+        t.pricing.feature6,
+        t.pricing.feature7,
+        t.pricing.feature8,
+        t.pricing.feature9
+      ],
+      popular: false
+    }
+  ];
+
   useEffect(() => {
     // Check if PayPal script already exists
     const existingScript = document.querySelector('script[src*="paypal.com/sdk"]');
@@ -128,10 +133,10 @@ const Pricing = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Elige Tu <span className="text-gradient-primary">Plan</span>
+            {t.pricing.title} <span className="text-gradient-primary">{t.pricing.titleHighlight}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Sin tarifas ocultas. Cancela en cualquier momento. Activación instantánea.
+            {t.pricing.subtitle}
           </p>
         </div>
 
@@ -149,7 +154,7 @@ const Pricing = () => {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <div className="gradient-primary px-4 py-1 rounded-full flex items-center gap-2">
                     <Star className="w-4 h-4" />
-                    <span className="text-sm font-semibold">Más Popular</span>
+                    <span className="text-sm font-semibold">{t.pricing.mostPopular}</span>
                   </div>
                 </div>
               )}
@@ -183,11 +188,11 @@ const Pricing = () => {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            ¿Quieres ser revendedor? ¡Gana dinero con nuestro programa de revendedores!
+            {t.pricing.resellerQuestion}
           </p>
           <Button variant="secondary" size="lg" asChild>
             <a href="https://api.whatsapp.com/message/DHGGPLDKC2L2N1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-              Programa de Revendedores
+              {t.pricing.resellerButton}
             </a>
           </Button>
         </div>
