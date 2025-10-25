@@ -3,15 +3,20 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = translations[language];
 
   const navItems = [
-    { name: "Características", href: "#features" },
-    { name: "Precios", href: "#pricing" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contacto", href: "#contact" },
+    { name: t.nav.features, href: "#features" },
+    { name: t.nav.pricing, href: "#pricing" },
+    { name: t.nav.faq, href: "#faq" },
+    { name: t.nav.contact, href: "#contact" },
   ];
 
 
@@ -29,7 +34,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -39,6 +44,7 @@ const Header = () => {
                 {item.name}
               </a>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Desktop CTA */}
@@ -67,6 +73,9 @@ const Header = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden pt-4 pb-2 space-y-4 animate-in slide-in-from-top-2 duration-200">
+            <div className="flex justify-center pb-2">
+              <LanguageSwitcher />
+            </div>
             {navItems.map((item) => (
               <a
                 key={item.name}
