@@ -34,6 +34,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     async function initializeLanguage() {
+      // First, check user's location
+      const userCountry = await getUserLocation();
+
+      // If user is in Spain, ALWAYS load Spanish (Spain location overrides everything)
+      if (userCountry === 'ES') {
+        setLanguageState('es');
+        setIsInitialized(true);
+        return;
+      }
+
+      // For non-Spain users, check if they have a saved preference
       const savedLanguage = localStorage.getItem('language') as Language | null;
 
       if (savedLanguage) {
@@ -42,14 +53,9 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      const userCountry = await getUserLocation();
-
-      if (userCountry === 'ES') {
-        setLanguageState('es');
-      } else {
-        const browserLang = getBrowserLanguage();
-        setLanguageState(browserLang);
-      }
+      // If no saved preference, use browser language
+      const browserLang = getBrowserLanguage();
+      setLanguageState(browserLang);
 
       setIsInitialized(true);
     }
