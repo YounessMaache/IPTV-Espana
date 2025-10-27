@@ -8,6 +8,8 @@ import championsLeague from "@/assets/leagues/champions-league.webp";
 import bundesliga from "@/assets/leagues/bundesliga.webp";
 import conferenceLeague from "@/assets/leagues/conference-league.webp";
 import ufc from "@/assets/leagues/ufc.webp";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const leagues = [
   { name: "Champions League", logo: championsLeague },
@@ -22,6 +24,9 @@ const leagues = [
 ];
 
 const LeaguesShowcase = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background"></div>
@@ -30,13 +35,13 @@ const LeaguesShowcase = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
             <Trophy className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Deportes en Vivo</span>
+            <span className="text-sm font-medium text-primary">{t.sports.badge}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Las Mejores <span className="text-gradient-primary">Ligas</span>
+            {t.sports.title} <span className="text-gradient-primary">{t.sports.titleHighlight}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Transmisión ilimitada de tus deportes favoritos. Mira fútbol, baloncesto, tenis, ciclismo, pádel y más, todo con una sola suscripción.
+            {t.sports.description}
           </p>
         </div>
 

@@ -5,6 +5,8 @@ import cuatro from "@/assets/channels/cuatro.jpg";
 import ceuta from "@/assets/channels/ceuta.jpg";
 import neox from "@/assets/channels/neox.jpg";
 import dazn2 from "@/assets/channels/dazn2.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const channels = [
   { name: "TeleMadrid", logo: telemadrid },
@@ -16,6 +18,9 @@ const channels = [
 ];
 
 const ChannelShowcase = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background"></div>
@@ -24,13 +29,13 @@ const ChannelShowcase = () => {
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Contenido Premium</span>
+            <span className="text-sm font-medium text-primary">{t.channels.badge}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">
-            Más de <span className="text-gradient-primary">20,000</span> Canales
+            {t.channels.title} <span className="text-gradient-primary">{t.channels.titleHighlight}</span> {t.channels.titleEnd}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Mira todos tus canales favoritos de España y del mundo
+            {t.channels.description}
           </p>
         </div>
 

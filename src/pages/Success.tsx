@@ -3,8 +3,13 @@ import { CheckCircle } from "lucide-react";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const Success = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -20,18 +25,17 @@ const Success = () => {
             
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl font-bold">
-                ¡Compra <span className="text-gradient-primary">Completada</span>!
+                {t.success.title} <span className="text-gradient-primary">{t.success.titleHighlight}</span>!
               </h1>
               <p className="text-xl text-muted-foreground">
-                Gracias por tu suscripción a IPTV España
+                {t.success.subtitle}
               </p>
             </div>
 
             <div className="bg-card/50 border border-border rounded-2xl p-6 space-y-4">
-              <h2 className="text-2xl font-bold">Siguiente Paso</h2>
+              <h2 className="text-2xl font-bold">{t.success.nextStep}</h2>
               <p className="text-muted-foreground">
-                Para activar tu servicio IPTV, por favor contáctanos por WhatsApp. 
-                Te proporcionaremos tus credenciales de acceso y toda la información necesaria.
+                {t.success.nextStepDesc}
               </p>
             </div>
 
@@ -42,12 +46,12 @@ const Success = () => {
                 rel="noopener noreferrer"
               >
                 <img src={whatsappIcon} alt="WhatsApp" className="w-6 h-6" />
-                Contactar por WhatsApp
+                {t.success.contactButton}
               </a>
             </Button>
 
             <div className="pt-4 text-sm text-muted-foreground">
-              <p>⚡ Activación Rápida • 💯 Soporte 24/7 • 🔒 Servicio Garantizado</p>
+              <p>{t.success.features}</p>
             </div>
           </div>
         </div>

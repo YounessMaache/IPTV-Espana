@@ -4,6 +4,8 @@ import movie65 from "@/assets/movies/65.webp";
 import movie1917 from "@/assets/movies/1917.webp";
 import barbie from "@/assets/movies/barbie.webp";
 import batman from "@/assets/movies/batman.webp";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations";
 
 const movies = [
   { name: "Black Adam", image: blackAdam },
@@ -15,6 +17,9 @@ const movies = [
 ];
 
 const MoviesShowcase = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card/10 to-background"></div>
@@ -22,10 +27,10 @@ const MoviesShowcase = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Películas y Series con <span className="text-gradient-primary">IPTV España</span>
+            {t.movies.title} <span className="text-gradient-primary">{t.movies.titleHighlight}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Disfruta de más de 80,000 películas y series en alta definición. Desde los últimos estrenos hasta los clásicos que nunca pasan de moda.
+            {t.movies.description}
           </p>
         </div>
 
